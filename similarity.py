@@ -56,5 +56,4 @@ if __name__ == '__main__':
 
     recommendedDB    = buldingDB('recommended.csv')
     notRecommendedDB = buldingDB('not-recommended.csv')
-    process()
     outputFile.close()
