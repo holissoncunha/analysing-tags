@@ -25,6 +25,11 @@ def removeAccents(tag):
 
     return unicodedata.normalize('NFD', unicode(tag, 'utf-8')).encode('ascii','ignore')
 
+def similarityBuPhoto():
+    
+    return None
+
+
 def process():
 
     for i in notRecommendedDB:
