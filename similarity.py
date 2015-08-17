@@ -25,12 +25,12 @@ def removeAccents(tag):
 
     return unicodedata.normalize('NFD', unicode(tag, 'utf-8')).encode('ascii','ignore')
 
-def similarityBuPhoto():
+def byPhoto():
     
     return None
 
 
-def process():
+def byUser():
 
     for i in notRecommendedDB:
         tag = []
@@ -56,5 +56,6 @@ if __name__ == '__main__':
 
     recommendedDB    = buldingDB('recommended.csv')
     notRecommendedDB = buldingDB('not-recommended.csv')
-    process()
+    byUser()
+    byPhoto()
     outputFile.close()
