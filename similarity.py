@@ -6,6 +6,7 @@ import unicodedata
 
 outputFile = open('output-similarity.txt','w')
 
+# converte csv para lista
 def buldingDB(db):
 
     database = list()
@@ -13,6 +14,7 @@ def buldingDB(db):
     [database.append(i.rstrip().split(',')) for i in dbFile]
     return database
 
+# gera arquivo de saída
 def output(similarity,tag1,tag2,usuario,tp_tag):
 
     outputFile.write('Usuário: ' + usuario +'\t'+ 'Foto: ' + tp_tag + '\n')
@@ -21,15 +23,17 @@ def output(similarity,tag1,tag2,usuario,tp_tag):
     outputFile.write('Similaridade: ' + str(similarity[0][0]) + '\n\n')
     return True
 
+# remove acento de todos as tags
 def removeAccents(tag):
 
     return unicodedata.normalize('NFD', unicode(tag, 'utf-8')).encode('ascii','ignore')
 
+# Analisa a similaridade entre as fotos, desconsiderando o usuário
 def byPhoto():
     
     return None
 
-
+# Analisa por usuário a similaridade entre tags utilizadas
 def byUser():
 
     for i in notRecommendedDB:
@@ -46,6 +50,7 @@ def byUser():
 
     return None
 
+# cálcula a similaridade entre duas tags
 def cosine(tagSet):
 
     count_vectorizer = CountVectorizer()
