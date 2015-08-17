@@ -1,3 +1,3 @@
 # analysing-tags
 
-Análise sobre taggeamento de fotos considerando o impacto da cultura nesse processo.
+Análises sobre o impacto da cultura no processo de etiquetagem de fotos!
