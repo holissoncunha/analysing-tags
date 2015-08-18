@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+### to aqui
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import unicodedata
