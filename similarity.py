@@ -32,23 +32,23 @@ def removeAccents(tag):
 
 # Analisa a similaridade entre as fotos, desconsiderando o usuário
 def byPhoto():
-    
+
     return None
 
 # Analisa por usuário a similaridade entre tags utilizadas
 def byUser():
 
     for i in notRecommendedDB:
-		tag = []
-		for j in recommendedDB:
-			if i[0] == j[0]:                       # verifica se é o mesmo usuário
-				if i[2] == j[3]:                   # verifica se é a mesma foto
-					tag.append(j[1].lower())
-		tag1 = removeAccents(' '.join(tag))
-		tag2 = removeAccents(i[1].lower())
-		tags = (tag1,tag2)
-		similarity = cosine(tags)
-		output(similarity,tag1,tag2,i[0],i[2])
+        tag = []
+        for j in recommendedDB:
+            if i[0] == j[0]:                       # verifica se é o mesmo usuário
+                if i[2] == j[3]:                   # verifica se é a mesma foto
+                    tag.append(j[1].lower())
+        tag1 = removeAccents(' '.join(tag))
+        tag2 = removeAccents(i[1].lower())
+        tags = (tag1,tag2)
+        similarity = cosine(tags)
+        output(similarity,tag1,tag2,i[0],i[2])
 
     return None
 
