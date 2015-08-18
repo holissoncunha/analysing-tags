@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-### to aqui
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import unicodedata
 
+count_vectorizer = CountVectorizer()
 outputFile = open('output-similarity.txt','w')
 
 # converte csv para lista
@@ -55,7 +55,6 @@ def byUser():
 # cálcula a similaridade entre duas tags
 def cosine(tagSet):
 
-	count_vectorizer = CountVectorizer()
 	count_matrix = count_vectorizer.fit_transform(tagSet)
 	return cosine_similarity(count_matrix[0], count_matrix[1])
 
